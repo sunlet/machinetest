@@ -11,12 +11,12 @@ public class NewObjectTest implements ITestItem{
 	}
 
 	public long getBaseDural() {
-		return 10000;
+		return 36952;
 	}
 
 	public void run() {
 		HashMap o;
-		for (int i=0;i<2200;i++){
+		for (int i=0;i<220;i++){
 			for (int j=0;j<1000;j++){
 				o=new HashMap();
 				for (int k=0;k<100;k++){
@@ -28,7 +28,7 @@ public class NewObjectTest implements ITestItem{
 	}
 
 	public int getThreadNum() {
-		return 5;
+		return 200;
 	}
 
 }

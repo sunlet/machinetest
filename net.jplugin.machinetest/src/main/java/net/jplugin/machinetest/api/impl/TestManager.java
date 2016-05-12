@@ -35,7 +35,7 @@ public class TestManager {
 		
 		for (int i=0;i<results.length;i++){
 			TestResult result = results[i];
-			System.out.println("指标["+result.getName()+"] 得分="+result.getScore()+" 消耗时间="+result.getDural());
+			System.out.println("指标["+result.getName()+"] 得分="+result.getScore()+" 消耗时间="+result.getDural()+" 毫秒");
 		}
 	}
 }

@@ -9,7 +9,7 @@ public class ComputeTest implements ITestItem{
 	}
 
 	public long getBaseDural() {
-		return 10500;
+		return 20287;
 	}
 
 	public void run() {
@@ -27,7 +27,7 @@ public class ComputeTest implements ITestItem{
 	}
 
 	public int getThreadNum() {
-		return 5;
+		return 10;
 	}
 	
 	
