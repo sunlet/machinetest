@@ -24,17 +24,21 @@ public class DiskTest implements ITestItem {
 	public void run() {
 		String filename1 = PluginEnvirement.getInstance().getWorkDir()+"/"+UUIDKit.getUUID();
 		String filename2 = PluginEnvirement.getInstance().getWorkDir()+"/"+UUIDKit.getUUID();
-		System.out.println(filename1);
-		System.out.println(filename2);
+//		System.out.println(filename1);
+//		System.out.println(filename2);
 		File f =new File(filename1);
 		FileWriter os = null;
 		try{
+			System.out.println(Thread.currentThread().getName()+" to make file");
+			int total = 15000000;
 			os = new FileWriter(f);
-			for (int i=0;i<15000000;i++){
+			for (int i=0;i<total;i++){
 				os.write("abcdefg,abcdefg,abcdefg,");
 			}
+			System.out.println(Thread.currentThread().getName()+" to copy file");
 			FileKit.copyFile(filename1, filename2);
 			os.close();
+			System.out.println(Thread.currentThread().getName()+" to delete file");
 			new File(filename1).delete();
 			new File(filename2).delete();
 		}catch(Exception e){
