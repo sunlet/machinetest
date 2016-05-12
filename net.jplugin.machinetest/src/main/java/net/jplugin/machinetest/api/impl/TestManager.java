@@ -14,6 +14,7 @@ public class TestManager {
 			TestResult result = new TestResult(item);
 			results[i] = result;
 			
+			System.out.println("$$$ 开始测试指标-"+item.getName());
 			long t1 = System.currentTimeMillis();
 			MulThreadKit mk = new MulThreadKit();
 			mk.start(item);

@@ -1,4 +1,4 @@
-package net.jplugin.machinetest.api.impl;
+package net.jplugin.machinetest.items;
 
 import net.jplugin.machinetest.api.ITestItem;
 
