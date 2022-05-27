@@ -1,16 +1,9 @@
 package net.jplugin.machinetest;
 
 import net.jplugin.core.kernel.api.AbstractPlugin;
-import net.jplugin.core.kernel.api.ExtensionPoint;
 import net.jplugin.core.kernel.api.PluginAnnotation;
-import net.jplugin.core.service.ExtensionServiceHelper;
-import net.jplugin.core.service.api.BindService;
 import net.jplugin.core.service.api.RefService;
-import net.jplugin.machinetest.api.ITestItem;
 import net.jplugin.machinetest.service.TestManager;
-import net.jplugin.machinetest.extensions.ComputeTest;
-import net.jplugin.machinetest.extensions.DiskTest;
-import net.jplugin.machinetest.extensions.NewObjectTest;
 
 @PluginAnnotation
 public class Plugin extends AbstractPlugin
