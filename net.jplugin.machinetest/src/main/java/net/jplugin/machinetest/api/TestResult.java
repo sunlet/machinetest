@@ -1,15 +1,13 @@
-package net.jplugin.machinetest.api.impl;
-
-import net.jplugin.machinetest.api.ITestItem;
+package net.jplugin.machinetest.api;
 
 public class TestResult {
-	static final int STD_SCORE = 10;
+	static final int STD_SCORE = 100;
 	
 	String name;
 	long baseDural;
 	long dural;
 	int score;
-	TestResult (ITestItem item){
+	public TestResult(ITestItem item){
 		this.name = item.getName();
 		this.baseDural = item.getBaseDural();
 	}

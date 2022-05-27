@@ -1,16 +1,18 @@
-package net.jplugin.machinetest.items;
+package net.jplugin.machinetest.extensions;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
-
-import org.apache.log4j.helpers.FileWatchdog;
 
 import net.jplugin.common.kits.FileKit;
 import net.jplugin.common.kits.UUIDKit;
+import net.jplugin.core.kernel.api.BindExtension;
 import net.jplugin.core.kernel.api.PluginEnvirement;
 import net.jplugin.machinetest.api.ITestItem;
 
+/**
+ * 评测磁盘IO能力
+ */
+@BindExtension
 public class DiskTest implements ITestItem {
 
 	public String getName() {
@@ -18,10 +20,15 @@ public class DiskTest implements ITestItem {
 	}
 
 	public long getBaseDural() {
-		return 32579;
+		return 10000;
 	}
 
 	public void run() {
+		for (int i=0;i<5;i++)
+			testOneTime();
+	}
+
+	private void testOneTime() {
 		String filename1 = PluginEnvirement.getInstance().getWorkDir()+"/"+UUIDKit.getUUID();
 		String filename2 = PluginEnvirement.getInstance().getWorkDir()+"/"+UUIDKit.getUUID();
 //		System.out.println(filename1);

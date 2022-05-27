@@ -1,9 +1,14 @@
-package net.jplugin.machinetest.items;
+package net.jplugin.machinetest.extensions;
 
 import java.util.HashMap;
 
+import net.jplugin.core.kernel.api.BindExtension;
 import net.jplugin.machinetest.api.ITestItem;
 
+/**
+ * 评测内存分配能力
+ */
+@BindExtension
 public class NewObjectTest implements ITestItem{
 
 	public String getName() {
@@ -11,7 +16,7 @@ public class NewObjectTest implements ITestItem{
 	}
 
 	public long getBaseDural() {
-		return 36952;
+		return 16186;
 	}
 
 	public void run() {

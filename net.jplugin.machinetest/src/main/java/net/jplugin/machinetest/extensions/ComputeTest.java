@@ -1,7 +1,12 @@
-package net.jplugin.machinetest.items;
+package net.jplugin.machinetest.extensions;
 
+import net.jplugin.core.kernel.api.BindExtension;
 import net.jplugin.machinetest.api.ITestItem;
 
+/**
+ * 评测CPU计算能力
+ */
+@BindExtension
 public class ComputeTest implements ITestItem{
 
 	public String getName() {
@@ -9,7 +14,7 @@ public class ComputeTest implements ITestItem{
 	}
 
 	public long getBaseDural() {
-		return 20287;
+		return 14779;
 	}
 
 	public void run() {
